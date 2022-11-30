@@ -25,7 +25,7 @@ function play(color = '#00ff00', speed = 1) {
         pos.y = Math.max(0, pos.y);
         pos.y = Math.min(pos.y, canvas.height);
 
-        ctx.fillRect(pos.x, pos.y, 8, 5);
+        ctx.fillRect(pos.x, pos.y, 5, 5);
         
         if (pos.x <= 0) {
             min = - Math.PI / 2;
@@ -60,8 +60,7 @@ function play(color = '#00ff00', speed = 1) {
     function updateDirection(radian) {
         direction.x = speed * Math.cos(radian);
         direction.y = speed * Math.sin(radian);
-        console.log("new direction: " + direction.x + " " + direction.y);
-        console.log("position: " + pos.x + " " + pos.y);
+
     }
 
     draw();
